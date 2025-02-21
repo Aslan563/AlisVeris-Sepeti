@@ -1,0 +1,18 @@
+@using StoreApp.Web.Models
+@model Cart
+
+<a href=""></a>
+<a class="btn btn-warning" asp-page="/Card" > Sepete Git </a>
+
+  @if(Model?.Items.Count>0) {
+
+    <small class="text-white">
+        @Model?.Items?.Sum(p=>p.Quantity) Adet Ürün 
+        [@Model?.CalculateTotal()  ₺]  
+    </small>
+
+  
+
+  }
+
+    

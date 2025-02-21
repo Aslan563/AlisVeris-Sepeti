@@ -1,0 +1,14 @@
+C:\Asp.net dersleri\8.StorApp\StoreApp\StoreApp.Data\bin\Debug\net8.0\StoreApp.Data.deps.json
+C:\Asp.net dersleri\8.StorApp\StoreApp\StoreApp.Data\bin\Debug\net8.0\StoreApp.Data.runtimeconfig.json
+C:\Asp.net dersleri\8.StorApp\StoreApp\StoreApp.Data\bin\Debug\net8.0\StoreApp.Data.dll
+C:\Asp.net dersleri\8.StorApp\StoreApp\StoreApp.Data\bin\Debug\net8.0\StoreApp.Data.pdb
+C:\Asp.net dersleri\8.StorApp\StoreApp\StoreApp.Data\obj\Debug\net8.0\StoreApp.Data.csproj.AssemblyReference.cache
+C:\Asp.net dersleri\8.StorApp\StoreApp\StoreApp.Data\obj\Debug\net8.0\StoreApp.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Asp.net dersleri\8.StorApp\StoreApp\StoreApp.Data\obj\Debug\net8.0\StoreApp.Data.AssemblyInfoInputs.cache
+C:\Asp.net dersleri\8.StorApp\StoreApp\StoreApp.Data\obj\Debug\net8.0\StoreApp.Data.AssemblyInfo.cs
+C:\Asp.net dersleri\8.StorApp\StoreApp\StoreApp.Data\obj\Debug\net8.0\StoreApp.Data.csproj.CoreCompileInputs.cache
+C:\Asp.net dersleri\8.StorApp\StoreApp\StoreApp.Data\obj\Debug\net8.0\StoreApp.Data.dll
+C:\Asp.net dersleri\8.StorApp\StoreApp\StoreApp.Data\obj\Debug\net8.0\refint\StoreApp.Data.dll
+C:\Asp.net dersleri\8.StorApp\StoreApp\StoreApp.Data\obj\Debug\net8.0\StoreApp.Data.pdb
+C:\Asp.net dersleri\8.StorApp\StoreApp\StoreApp.Data\obj\Debug\net8.0\StoreApp.Data.genruntimeconfig.cache
+C:\Asp.net dersleri\8.StorApp\StoreApp\StoreApp.Data\obj\Debug\net8.0\ref\StoreApp.Data.dll

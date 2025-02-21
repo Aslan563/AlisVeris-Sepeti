@@ -1,0 +1,96 @@
+@model OrderModel
+
+<div class="mb-4">
+   <h3>CheckOut</h3>
+
+   <h6 class="mt-2">Sipariş Detayı</h6> 
+</div>
+
+   <div asp-validation-summary="All"  class="text-danger"></div>
+
+<div class="row">
+    <div class="col-md-8">
+        
+            <form  method="post"> 
+             <div class="row  mb-2">
+                
+                <div class="col">
+                    <label asp-for="@Model.Name"></label>
+                    <input asp-for="@Model.Name" class="form-control">
+                </div>
+                <div class="col">
+                    <label asp-for="@Model.City"></label>
+                    <input asp-for="@Model.City" class="form-control">
+                </div>
+                <div class="col">
+                    <label asp-for="@Model.Email"></label>
+                    <input asp-for="@Model.Email" class="form-control">
+                </div>
+                <div class="col">
+                    <label asp-for="@Model.Phone"></label>
+                    <input asp-for="@Model.Phone" class="form-control">
+                </div>
+             </div>
+            <label asp-for="@Model.AddressLine"></label>
+            <textarea asp-for="@Model.AddressLine" class="form-control"></textarea> 
+        
+             <div class="row mt-2">
+
+              <h6>Kart Bilgileri</h6>
+              <div class="col">
+                <label asp-for="@Model.CartName"></label>
+                <input asp-for="@Model.CartName" class="form-control">
+            </div>
+            <div class="col">
+                <label asp-for="@Model.CartNumber"></label>
+                <input asp-for="@Model.CartNumber" class="form-control">
+            </div>
+             </div>
+             <div class="row">
+              <div class="col">
+                <label asp-for="@Model.expirationMonth"></label>
+                <input asp-for="@Model.expirationMonth" class="form-control">
+            </div>
+            <div class="col">
+                <label asp-for="@Model.expirationYears"></label>
+                <input asp-for="@Model.expirationYears" class="form-control">
+            </div>
+            <div class="col">
+              <label asp-for="@Model.cvc"></label>
+              <input asp-for="@Model.cvc" class="form-control">
+          </div>
+             </div>
+        
+             
+        
+        
+             <input type="submit" class="btn btn-primary mt-1" value="Ödemeyi Tamamla">
+             </form>
+        
+        
+    </div>
+
+    <div class="col-md-4">
+      <h4 class="mb-2">Sipariş Özeti</h4>
+      <ul class="list-group">
+        @foreach(var item in Model.Cart.Items){
+            <li class="list-group-item d-flex justify-content-between">
+              <div>
+                <h6>@item.Product.Name x @item.Quantity</h6>
+              </div>
+
+              <div>
+                <h6>@item.Product.Price.ToString("c") ₺</h6>
+              </div>
+            </li>
+        }
+
+        <li class="list-group-item ">
+            <span>Toplam:</span>
+              <strong>@Model.Cart.CalculateTotal().ToString("c")</strong>
+            </div>
+          </li>
+      </ul>
+
+    </div>
+</div>

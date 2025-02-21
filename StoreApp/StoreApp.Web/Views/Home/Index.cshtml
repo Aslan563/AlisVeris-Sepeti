@@ -1,0 +1,61 @@
+@model ProductListViewModel
+
+<div class=" mb-4">
+  <form action="/products" method="get">
+      <div class="form-group">
+        <label for="search">Filter</label>
+        <input type="text" class="form-control" id="search" name="search" placeholder="Search products..." />
+      </div>
+      <button type="submit" class="btn btn-primary mt-1">Ara</button>
+    </form></div>
+
+
+
+<div class="row">
+  <div class="col-sm-3 mb-1"> 
+ 
+   <vc:categories-list></vc:categories-list>
+  </div>
+  <div class="col-9">
+    @if(Model.Products.Count()==0){
+  <p>Ürün Yok</p>
+}
+else{
+@foreach(var p in Model.Products)
+{
+    <div class="card card-outline-success mb-2 " >
+      <div class="d-flex justify-content-between p-2">
+
+        <div class="d-flex">
+          <div>
+          <img src="@Url.Content(p.Image)" class="card-img-top img-fluid" alt="..." style="max-height: 200px; object-fit: cover;"></div>
+
+        <div class="ml-2"><h4>@p.Name</h4>
+        <p>@p.Description</p> </div>
+      </div>
+        <div class="m-1"> 
+          <button type="button" class="btn btn-outline-success">@p.Price ₺</button>
+          
+        </div>
+         </div>
+          <form asp-page="/Card" method="post">
+            <input type="hidden" value="@p.Id" name="Id">
+            <input type="submit" value="Sepete Ekle" class="btn btn-outline-success m-2 pull-right" style="float: right;">
+          </form>
+        </div>
+     
+}
+
+}
+
+  @if(Model.pageinfo.Totalpage>1){
+      <div Page-Model="@Model.pageinfo"   Page-action="Index"></div>
+  }
+
+</div>
+
+
+</div>
+ 
+
+
